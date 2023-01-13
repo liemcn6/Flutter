@@ -53,10 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
    static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
    static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    LikeButton(),
     Text(
       'Index 1: Business',
       style: optionStyle,
@@ -100,6 +97,62 @@ class _MyHomePageState extends State<MyHomePage> {
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
+      ),
+    );
+  }
+}
+
+class LikeButton extends StatefulWidget {
+  const LikeButton({Key? key}) : super(key: key);
+
+  @override
+  State<LikeButton> createState() => _LikeButtonState();
+}
+
+class _LikeButtonState extends State<LikeButton> {
+  bool isLiked = false;
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+        IconButton(
+        onPressed: () {
+         
+          isLiked = !isLiked;
+          if(isLiked == false){
+            print('unLiked');
+          }else print("Liked");
+        },
+        iconSize: 50,
+        icon: Icon(isLiked ? Icons.thumb_up_alt : Icons.thumb_up_off_alt)
+        ),
+        Text('You have not like yet!'),
+      ]),
+    );
+  }
+}
+
+class MyHomePage1 extends StatelessWidget {
+  const MyHomePage1({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('StatelessWidget Example'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: const [
+            LikeButton(),
+            Text('You have not like yet!'),
+          ],
+        ),
       ),
     );
   }
