@@ -51,7 +51,7 @@ class _SignUpState extends State<SignUp>{
             const SizedBox(height: 30,),
 
             //name
-            const Text("Full Name", textAlign: TextAlign.start, style: const TextStyle(
+            const Text("Full Name", textAlign: TextAlign.start, style: TextStyle(
               color: Colors.grey,
               fontSize: 12,
             ),),
@@ -70,7 +70,7 @@ class _SignUpState extends State<SignUp>{
            const  SizedBox(height: 20,),
 
             //email
-            const Text("Email Address", textAlign: TextAlign.start, style: const TextStyle(
+            const Text("Email Address", textAlign: TextAlign.start, style: TextStyle(
               color: Colors.grey,
               fontSize: 12,
             ),),
