@@ -27,11 +27,13 @@ class _SignInState extends State<SignIn>{
         //color: Colors.red,
         width: double.infinity,
         height: 400,
-        padding: const EdgeInsets.only(top: 150, left: 10),
+        //padding: const EdgeInsets.only(top: 20, left: 10),
+        margin: const EdgeInsets.only(top: 40),
         child: const Text('SIGN IN', style: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 25,
-        ),),
+          color: Colors.black38
+        ),textAlign: TextAlign.center,),
       ),
 
 
