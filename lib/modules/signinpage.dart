@@ -51,7 +51,7 @@ class _SignInState extends State<SignIn>{
             const SizedBox(height: 20,),
 
             //email
-            const Text("Email Address", textAlign: TextAlign.start, style: const TextStyle(
+            const Text("Email Address", textAlign: TextAlign.start, style: TextStyle(
               color: Colors.grey,
               fontSize: 12,
             ),),
@@ -71,7 +71,7 @@ class _SignInState extends State<SignIn>{
             const SizedBox(height: 20,),
 
             //password
-            const Text("Password", textAlign: TextAlign.start, style: const TextStyle(
+            const Text("Password", textAlign: TextAlign.start, style: TextStyle(
               color: Colors.grey,
               fontSize: 12,
             ),),
