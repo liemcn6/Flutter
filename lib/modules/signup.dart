@@ -1,3 +1,4 @@
+import 'package:demo/modules/signinpage.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatefulWidget{
@@ -145,7 +146,9 @@ class _SignUpState extends State<SignUp>{
             const SizedBox(height: 30,),
             OutlinedButton(
 
-              onPressed: (){},
+              onPressed: (){Navigator.of(context).pushReplacement(
+               MaterialPageRoute(builder: (context) => SignIn()),
+             );},
               child: const Text('Sign Up'),
               style: OutlinedButton.styleFrom(
                 backgroundColor: Colors.teal.shade700,
